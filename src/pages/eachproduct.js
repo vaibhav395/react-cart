@@ -29,6 +29,10 @@ const Eachproduct = () => {
 
     const handleAddCart = (productId)=>{
         let _cart = {...cart};
+        if(!_cart.items)
+        {
+            _cart.items= {};
+        }
         if(!_cart.items[productId])
         {
             _cart.items[productId] = 1;
